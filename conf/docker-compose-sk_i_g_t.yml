@@ -56,6 +56,9 @@ services:
     container_name: signalk-server
     restart: unless-stopped
     network_mode: host
+    ports:
+      - "3443:3443/tcp"
+      - "10110:10110/udp"    
     volumes:
       - $PWD/../signalk_conf:/home/node/.signalk
       - /dev:/dev/hostdev

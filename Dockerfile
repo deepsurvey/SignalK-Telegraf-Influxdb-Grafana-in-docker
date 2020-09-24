@@ -34,5 +34,7 @@ RUN npm run build
 RUN mkdir -p /home/node/.signalk
 
 EXPOSE 3000
+EXPOSE 3443
+EXPOSE 10110
 ENV IS_IN_DOCKER true
 CMD ["bash"]
