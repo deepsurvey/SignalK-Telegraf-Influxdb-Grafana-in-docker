@@ -58,7 +58,7 @@ services:
     network_mode: bridge
     ports:
       - "3443:3443/tcp"
-      - "10111/udp"
+      - "192.168.255.255:10111:10110/udp"
     volumes:
       - $PWD/../signalk_conf:/home/node/.signalk
       - /dev:/dev/hostdev
