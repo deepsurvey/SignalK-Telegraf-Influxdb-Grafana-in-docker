@@ -55,10 +55,10 @@ services:
     image: signalk-server
     container_name: signalk-server
     restart: unless-stopped
-    network_mode: host
+    network_mode: bridge
     ports:
       - "3443:3443/tcp"
-      - "10110:10110/udp"    
+      - "10110:10110/udp"
     volumes:
       - $PWD/../signalk_conf:/home/node/.signalk
       - /dev:/dev/hostdev
