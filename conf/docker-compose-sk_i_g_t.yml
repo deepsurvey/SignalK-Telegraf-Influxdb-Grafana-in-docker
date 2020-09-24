@@ -55,7 +55,7 @@ services:
     image: signalk-server
     container_name: signalk-server
     restart: unless-stopped
-    network_mode: bridge
+    network_mode: host
     ports:
       - "3443:3443/tcp"
       - "10110:10110/udp"
